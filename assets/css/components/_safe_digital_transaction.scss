@@ -1,0 +1,200 @@
+@use "../variable" as v;
+@use "../mixin" as m;
+
+.safe_digital_transaction {
+  display: flex;
+  width: 100%;
+  padding-top: 20px;
+  background: rgba(255, 83, 83, 0.03);
+
+  &_fig {
+    width: 50%;
+    margin-left: 116px;
+    margin-right: 28px;
+
+    &_img {
+      border-radius: 26px;
+    }
+  }
+
+  &_desc {
+    width: 50%;
+    margin-top: 50px;
+    padding-right: 247px;
+    margin-left: 66px;
+
+    &_heading {
+      font-size: 35px;
+      font-weight: 700;
+      line-height: 50px;
+    }
+
+    &_para {
+      line-height: 30px;
+    }
+
+    .safe_digital_transaction_btn {
+      @include m.btn();
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .safe_digital_transaction {
+    flex-direction: row;
+
+    &_desc {
+      padding-right: 0px;
+      margin: 33px 66px 0 64px;
+      text-align: left;
+
+      &_heading {
+        font-size: 29px;
+      }
+
+      .safe_digital_transaction_btn {
+        font-size: 12px;
+        height: 45px;
+        width: 113px;
+      }
+    }
+    &_fig {
+      margin: 20px 92px;
+
+      &_img {
+        width: 115%;
+        margin-top: 48px;
+      }
+    }
+  }
+}
+
+// @media (max-width: 768px) {
+// }
+
+@media (max-width: 600px) {
+  .safe_digital_transaction {
+    flex-direction: column;
+
+    &_desc {
+      width: 100%;
+      padding-right: 0px;
+      margin-left: 0px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 0;
+
+      &_heading {
+        font-size: 29px;
+      }
+
+      .safe_digital_transaction_btn {
+        font-size: 12px;
+        height: 45px;
+        width: 113px;
+      }
+    }
+    &_fig {
+      margin: 20px 92px;
+
+      &_img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .safe_digital_transaction_fig {
+    margin: 0;
+
+    &_img {
+      width: 200%;
+      padding: 0 17px;
+      border-radius: 65px;
+    }
+  }
+}
+
+// @media (max-width: 414px) {}
+
+// @media (max-width: 412px) {}
+
+@media (max-width: 393px) {
+  .safe_digital_transaction {
+    flex-direction: column;
+
+    &_desc {
+      width: 100%;
+      padding-right: 0px;
+      margin-left: 0px;
+      text-align: center;
+      padding: 20px;
+      margin-top: 0;
+
+      &_heading {
+        font-size: 29px;
+      }
+
+      &_btn {
+        font-size: 12px;
+        height: 45px;
+        width: 113px;
+      }
+    }
+    &_fig {
+      margin: 0;
+
+      &_img {
+        width: 180%;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+// @media (max-width: 375px) {}
+
+@media (max-width: 353px) {
+  .safe_digital_transaction {
+    flex-direction: column;
+
+    &_desc {
+      padding: 20px;
+      margin: 0;
+
+      &_heading {
+        font-size: 29px;
+      }
+
+      &_btn {
+        font-size: 12px;
+        height: 45px;
+        width: 113px;
+      }
+    }
+    &_fig {
+      margin: 0;
+
+      &_img {
+        width: 180%;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .safe_digital_transaction {
+    &_fig_img {
+      margin-top: 20px;
+    }
+
+    &_desc {
+      .safe_digital_transaction_btn {
+        height: 36px;
+        width: 130px;
+      }
+    }
+  }
+}

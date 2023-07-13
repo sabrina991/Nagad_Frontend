@@ -1,0 +1,39 @@
+@mixin link() {
+  color: #4e4b66;
+  text-decoration: none;
+  @content;
+}
+
+@mixin btn() {
+  width: 150px;
+  height: 57px;
+  background-color: #d0392c;
+  color: white;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 800;
+  @content;
+
+  &:hover {
+    background-color: white;
+    color: #d0392c;
+    cursor: pointer;
+    border: 2px solid #d0392c;
+  }
+}
+
+@mixin img() {
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+
+  &:hover {
+    transform-origin: top left;
+    transform: scale(1.3);
+    transition-duration: 500ms;
+  }
+}
